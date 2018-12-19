@@ -34,8 +34,7 @@ namespace HeroMonsterClasses_Part2
                 monster.Defend(hero.Attack(die));
                 hero.Defend(monster.Attack(die));
 
-                DisplayStats(hero);
-                DisplayStats(monster);
+                DisplayResults(hero, monster);
 
                 if (hero.Health <= 0 || monster.Health <= 0)
                 {
@@ -48,7 +47,11 @@ namespace HeroMonsterClasses_Part2
             }
         }
 
-        
+        public void DisplayResults(Character opponent1, Character opponent2)
+        {
+            DisplayStats(opponent1);
+            DisplayStats(opponent2);
+        }
         public void UseBonusAttack(Character character, Dice die)
         {
             if (character.AttackBonus)
