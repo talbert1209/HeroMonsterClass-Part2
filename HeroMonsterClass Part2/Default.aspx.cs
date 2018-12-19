@@ -16,7 +16,7 @@ namespace HeroMonsterClasses_Part2
             Character hero = new Character(){AttackBonus = false, DamageMaximum = 15, Health = 100, Name = "Tim"};
             Character monster = new Character() {AttackBonus = false, DamageMaximum = 14, Health = 100, Name = "Phoebe"};
 
-            //decide which character has the attack bonus and attack
+            // Decide which character has the attack bonus and attack
             if (die.Roll() == 0)
             {
                 hero.AttackBonus = true;
@@ -28,6 +28,7 @@ namespace HeroMonsterClasses_Part2
                 hero.Defend(monster.Attack(die));
             }
 
+            // Battle loop
             bool winner = false;
             while (!winner)
             {
